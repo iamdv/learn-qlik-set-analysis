@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #007B9C;
+  color: rgba(255,255,255,.65);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+body * {
+  font-family: "Exo 2", "Lato", "Helvetica Neue", sans-serif;
+}
+
+header {
+  padding: 5px 0px 0px 35px;
+  background: #005F78;
+  /*background: rgba(0,0,0,.5);*/
+  color: rgba(255,255,255,.3);
+}
+
+.developedby{
+  text-align: right;
+  color: red;
+}
+
+.column-wrapper{
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.logo {
+  cursor: default;
+  -webkit-transform-origin: middle;
+  -webkit-transform: scale(.2);
+  transform-origin: middle;
+  transform: scale(.2);
+  z-index: 999;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.task { /* Order */
+  width: 100%;
+  background: #005F78;
+  color: rgba(255,255,255,.5);
+  font-size: 32px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+}
+
+.left-column   {
+  -webkit-flex: 2 2 68%;
+    flex: 2 2 68%;
+  -webkit-order: 2;
+    order: 1;
+  padding: 10px 10px 10px 10px;
+}
+
+.right-column   {
+  background-image:
+    linear-gradient(
+      #006F8C, #005F78
+    );
+  -webkit-flex: 2 2 32%;
+    flex: 2 2 32%;
+  -webkit-order: 2;
+    order: 2;
+  width: 32%;
+  padding: 10px 10px 10px 10px;
+  
+}
+
+.about-the-game{
+  text-align: center;
+  color: rgba(255,255,255,.40);
+}
+
+/************************************/
+
+.editor{
+  display: table;
+  margin: 0 auto;
+  border-style: solid;
+  border-color: #005F78;
+  border-width: 7px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px #404040;
+}
+
+.editor-header{
+  background: #005F78;
+  margin: 10px 10px 10px 0px auto;
+  width: 700px;
+  height: 50px;
+  padding: 10px 0px 10px 5px;
+  font-size: 1.2em;
+}
+
+.editor-body{
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex-flow: row;
+  flex-wrap: wrap;  
+  width: 700px;
+  height: 280px;
+  background-color: #e0e0e0;
+}
+
+.editor-rownum{
+  -webkit-flex: 2 2 5%;
+    flex: 2 2 5%;
+  -webkit-order: 1;
+    order: 1;  
+  display: table-cell;
+  color: #898989;
+  padding: 7px 7px 0px 7px;
+  line-height: 1.5;
+  text-align: right;
+  background-color: #CECECE;
+  font-size: 18px;
+}
+
+.editor-container{
+  -webkit-flex: 2 2 95%%;
+    flex: 2 2 95%;
+  -webkit-order: 2;
+    order: 2;
+  padding: 5px 5px 0px 5px;
+  height: 20px;
+}
+
+#idSetAnalysisInput{
+  width: 90%;
+  font-size: 18px;
+}
+
+#idSubmit {
+    padding:5px 10px; 
+    background:#ccc;  
+    border-color: white;
+    border-width: 2px;
+    cursor:pointer;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; 
+}
+
+.editor-blinking-color{
+  background-color: #D3D3D3;
+}
+
+.editor-comments{
+  color: #b3b3b3;
+}
+/************************************/
+.level-wrapper{
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex-flow: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.level-header{
+  -webkit-flex: 2 2 75%;
+    flex: 2 2 75%;
+    width: 75%;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.hamburger{
+  -webkit-flex: 2 2 25%;
+    flex: 2 2 25%;  
+  background:none;
+  color: rgba(255,255,255,.65);
+  border:0;
+  font-size:1.8em;
+  cursor:pointer;
+  outline:none;
+}
+/************************************/
+.food-wrapper{
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-flex-flow: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 10px 10px 20px 10px;
+}
+
+.food-container{
+  -webkit-flex: 5 5 20%;
+  flex: 5 5 20%;
+  width: 20%;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 50%; 
+  border-style: solid;
+  border-color: #005F78;
+  border-width: 1px;
+  border-radius: 1px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;       
+}
+
+.food-items{
+  display: block;
+  margin: 0 auto;
+  height: 70px;
+}
+
+/************************************/
+.progress {
+  width: 100%;
+  height: 2px;
+}
+.progress-wrap {
+  background: rgba(255,255,255,.40);
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  .progress-bar {
+    background: #ddd;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+/************************************/
+
+.level-menu a{
+  text-decoration: none;
+}
+
+#idLevelMenu ul, #idLevelMenu li {
+  padding: 5px 5px 5px 0px;
+  margin:0px 0px 10px 0px; 
+}
+
+.list-selected{
+  background-color: #054c5e;
+  color: white;
+  padding: 5px 10px 5px 5px; 
+}
+
+#idLevelMenu li  {background-color: transparent; text-decoration: none;}
+
+ul{
+  list-style-type: none;
+}
+
+ul li {  
+  color: rgba(255,255,255,.35);
+}
+
+a {color: inherit; }
+
+li:hover a { color: white }
+
+/************************************/
+

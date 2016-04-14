@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <title>Qalorie Counter</title>
+    <title>CSS Diner - Where we feast on CSS Selectors!</title>
+    <!-- <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="jquery.js" type="text/javascript" charset="utf-8"></script> -->
+    <link href="http://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    
+</head>
+<body>
+  <header>
+       <span>Qalorie Counter using Qlik Set Analysis</span>
+<!--       <div class="logo">
+        <img src=".image/logo.png" alt="Logo"> 
+      </div> -->
+    </header>
+    
+  <div class="question">
+    <h2 id="idTask" class="task">Question goes here...</h2>
+  </div>
+
+  <div class="column-wrapper bottom-half">
+    <div class="left-column">
+        
+        <div class="food-wrapper">
+          <div class="food-container">
+            <object class="food-items" id="idSVGSandwich" data="https://openclipart.org/download/150769/1311191164.svg" type="image/svg+xml"></object>
+            <p>Name: Sandwich</p>
+            <p>Category: Food</p>
+            <p>Calories: 250</p>
+            <p>Fat: 13 g</p>
+            <p>IsVeg: True</p>
+          </div>
+
+          <div class="food-container">
+            <object class="food-items" id="idSVGBurger" data="https://openclipart.org/download/193540/hamburger-no-cheese.svg" type="image/svg+xml"></object>
+            <p>Name: Hamburger</p>
+            <p>Category: Food</p>
+            <p>Calories: 450</p>
+            <p>Fat: 22 g</p>
+            <p>IsVeg: False</p>
+          </div> 
+
+          <div class="food-container">
+            <object class="food-items" id="idSVGChicken" data="https://openclipart.org/download/149641/fried-chicken.svg" type="image/svg+xml"></object>
+            <p>Name: Chicken</p>
+            <p>Category: Food</p>
+            <p>Calories: 620</p>
+            <p>Fat: 39 g</p>
+            <p>IsVeg: False</p>
+          </div> 
+          
+          <div class="food-container">
+            <object class="food-items" id="idSVGMuffin" data="https://openclipart.org/download/155473/1313448311.svg" type="image/svg+xml"></object>
+            <p>Name: Coffee</p>
+            <p>Category: Beverage</p>
+            <p>Calories: 200</p>
+            <p>Fat: 7 g</p>
+            <p>IsVeg: True</p>
+          </div> 
+          
+          <div class="food-container">
+            <object class="food-items" id="idSVGMuffin" data="https://openclipart.org/download/235715/jean-victor-balin-muffin-remix.svg" type="image/svg+xml"></object>
+            <p>Name: Muffin</p>
+            <p>Category: Desert</p>
+            <p>Calories: 380</p>
+            <p>Fat: 16 g</p>
+            <p>IsVeg: True</p>
+          </div>                                        
+        </div>
+  
+        <div class="editor">
+          <div class="editor-header">Expression Editor</div>
+          <div class="editor-body">
+            <div class="editor-rownum">1 2 3 4 5 6 7 8 9 10</div> 
+            <div class="editor-container">
+                <input type="text" id="idSetAnalysisInput" placeholder="Type in Set Analysis expression..." name="setAnalysisInput" autocomplete="off" />
+                <button type="button" id="idSubmit">Submit</button>
+              <br> <br>
+              <span class="editor-comments">// Based on the above question, type the set expression.</span>
+              <br> <br>
+              <span class="editor-comments">// Type the relevant level number to skip levels (1 - 21).</span>
+            </div>
+          
+          </div>
+          
+        </div>
+      
+      <div class="about-the-game">
+          <span class="how-to-play">
+            <p>What is this and how to play?</p>
+          </span>
+          <p>It's a little game to help you learn QlikView/QlikSense Set Analysis Syntax.<br> 
+            Type in the correct syntax to complete each level. Get help on the right.</p>
+          <p>Designed and Developed by @dvadithala | www.QlikShare.com</p>
+          <p>It's a work in progress, so please give me feedback!</p>
+          <p>Github repo: Coming soon...</p>
+      </div>
+      
+    </div>
+    
+    <div id="idLevelNavigation" class="right-column"> 
+        <div class="level-wrapper">
+          <div id="idLevelHeader" class="level-header">
+            Level 1 of 20
+          </div>
+          <button id="idHamburger" class="hamburger">&#9776;</button>
+          <p>Toggle between hints and levels</p>
+          <div class="progress-wrap progress" data-progress-percent="25">
+              <div class="progress-bar progress"></div>
+          </div>
+          
+          <div id="idLevelHelp" class="level-help">
+            <span>Hint(s):</span>
+            <p>Test message</p>
+          </div> 
+          
+          <div id="idLevelMenu" class="level-menu">
+            <ul>
+              <li><a class="list-items" href="#" data-id="1">1. Aggregation: Sum</a></li>
+              <li><a class="list-items" href="#" data-id="2">2. Aggregation: Count</a></li>
+              <li><a class="list-items" href="#" data-id="3">3. Identifier: Current Selections</a></li>
+              <li><a class="list-items" href="#" data-id="4">4. Identifier: Full Set</a></li>
+              <li><a class="list-items" href="#" data-id="5">5. Identifier: Previous Selections</a></li>
+              <li><a class="list-items" href="#" data-id="6">6. Operator: Union</a></li>
+              <li><a class="list-items" href="#" data-id="7">7. Operator: Exclusion</a></li>
+              <li><a class="list-items" href="#" data-id="8">8. Operator: Intersection</a></li>
+              <li><a class="list-items" href="#" data-id="9">9. Operator: Symmetric Difference</a></li>
+              <li><a class="list-items" href="#" data-id="10">10. Modifier: Numbers</a></li>
+              <li><a class="list-items" href="#" data-id="11">11. Modifier: Strings</a></li>
+              <li><a class="list-items" href="#" data-id="12">12. Two or More Modifiers</a></li>
+              <li><a class="list-items" href="#" data-id="13">13. Modifier: Wild Card</a></li>
+              <li><a class="list-items" href="#" data-id="14">14. Modifier: Range</a></li>
+              <li><a class="list-items" href="#" data-id="15">15. Modifier: Nested Expression</a></li>
+              <li><a class="list-items" href="#" data-id="16">16. Modifier: Dollar Sign Expansion</a></li>
+              <li><a class="list-items" href="#" data-id="17">17. Modifier: Exclusions</a></li>
+              <li><a class="list-items" href="#" data-id="18">18. Indirect Analysis (P)</a></li>  
+              <li><a class="list-items" href="#" data-id="19">19. Indirect Analysis (E)</a></li>
+              <li><a class="list-items" href="#" data-id="20">20. Null Exclusions</a></li>               
+            </ul>
+          </div>
+          
+
+        </div>
+
+    </div>
+  </div> 
+  
+  
+  <footer>
+      
+  </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script type="text/javascript" src="progressBar.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
